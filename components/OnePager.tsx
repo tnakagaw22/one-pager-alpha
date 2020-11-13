@@ -12,6 +12,7 @@ import { OnePagerOverview } from './OnePagerOverview';
 import { OnePagerFounders } from './OnePagerFounders';
 import { OnePagerFinances } from './OnePagerFinances';
 import { OnePagerVideo } from './OnePagerVideo';
+import { OnePagerMap } from './OnePagerMap';
 import { OnePagerFaqs } from './OnePagerFaqs';
 
 /** Renders a full one pager based on the onePagerUrl. */
@@ -26,7 +27,7 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
     setIsLoading(true);
     getOnePagerData(onePagerUrl).then((result) => {
       setOnePager(result);
-      setIsLoading(false);
+      setIsLoading(false);      
     });
   }, []);
 
@@ -59,6 +60,10 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
         </>
       ) : null}
 
+
+      <OnePagerMap onePagerData={onePagerData} isLoading={isLoading} />
+
+      <Diveder50 />
 
       <OnePagerFaqs onePagerData={onePagerData} isLoading={isLoading} />
 

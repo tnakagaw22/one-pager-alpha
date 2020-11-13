@@ -11,6 +11,7 @@ export const EMPTY_ONE_PAGER: OnePagerData = {
   briefDescription: '',
   founders: [],
   faqs: [],
+  mapUrl: '',
 };
 
 const facebook: OnePagerData = {
@@ -29,6 +30,7 @@ const facebook: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
   investors: [investors.investor2],
   faqs: faqs.facebookFaqs,
+  mapUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123674388541!2d-73.99044428255614!3d40.73730410000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593ad569747f%3A0x3d6dc2d662404da2!2sFacebook!5e0!3m2!1sen!2sus!4v1605242752714!5m2!1sen!2sus',
 };
 
 const lendingClub: OnePagerData = {
@@ -44,7 +46,8 @@ const lendingClub: OnePagerData = {
   fundraisingDetails: 'Expand capabilities and accelerate customer growth',
   founders: [founders.lendingClub1, founders.lendingClub2],
   investors: [investors.investor1],
-  faqs: faqs.facebookFaqs,
+  faqs: faqs.lendingClubFaqs,
+  mapUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23614.518988627573!2d-71.58866846044921!3d42.28247500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e38aaf4ae8f379%3A0xe16ce732919dc643!2sLendingClub%20Patient%20Solutions!5e0!3m2!1sen!2sus!4v1605243244267!5m2!1sen!2sus',
 };
 
 const spotify: OnePagerData = {
@@ -62,6 +65,7 @@ const spotify: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/watch?v=ZDXETBfXSuc&t=166s',
   investors: [investors.investor1],
   faqs: faqs.spotifyFaqs,
+  mapUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.346192684891!2d-74.01417808451104!3d40.710394845650555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a328bb5c7f%3A0xf14187fc45e4df26!2sSpotify!5e0!3m2!1sen!2sus!4v1605243187704!5m2!1sen!2sus',
 };
 
 const workday: OnePagerData = {
@@ -78,6 +82,7 @@ const workday: OnePagerData = {
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
   faqs: faqs.workdayFaqs,
+  mapUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.641828262384!2d-73.98693468451016!3d40.74790614335494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3eb05ad4b%3A0x2764b7a15c96caba!2sWorkday%20-%20New%20York!5e0!3m2!1sen!2sus!4v1605243154595!5m2!1sen!2sus',
 };
 
 const zynga: OnePagerData = {
@@ -95,6 +100,7 @@ const zynga: OnePagerData = {
   pitchVideoLink: 'https://www.youtube.com/watch?v=HdVWHAPiqno',
   investors: [investors.investor1, investors.investor3],
   faqs: faqs.zyngaFaqs,
+  mapUrl:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068611.582659641!2d-78.9377756595379!3d41.31558531581875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb33ef38a049%3A0x732ca636effb6032!2sZynga!5e0!3m2!1sen!2sus!4v1605243111600!5m2!1sen!2sus',
 };
 
 /** Map of urls to full one pager data. */

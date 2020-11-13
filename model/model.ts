@@ -34,4 +34,5 @@ export interface OnePagerData {
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
   faqs?: OnePagerFaq[];
+  mapUrl?: string;
 }
