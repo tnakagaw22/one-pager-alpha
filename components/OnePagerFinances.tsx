@@ -4,6 +4,9 @@ import { Heading } from '@chakra-ui/core';
 import { OnePagerData } from '../model/model';
 import { ContentCard } from './ContentCard';
 
+ 
+import NumberFormat from 'react-number-format';
+
 type OnePagerFinancesProps = {
   onePagerData: OnePagerData;
   isLoading: boolean;
@@ -14,10 +17,9 @@ export const OnePagerFinances = ({
   onePagerData,
   isLoading,
 }: OnePagerFinancesProps) => {
-  // Format a number to include a dollar sign. This function
-  // will be improved as part of task 2.
+
   const formatFinanceNumber = (financeNumber: number) => {
-    return `$${financeNumber}`;
+    return <NumberFormat value={financeNumber} displayType={'text'} thousandSeparator={true} prefix={'$'} />;
   };
 
   return (
