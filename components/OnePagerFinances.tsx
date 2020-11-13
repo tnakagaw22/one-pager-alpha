@@ -1,10 +1,9 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/core';
+import { Heading, Progress, Text } from '@chakra-ui/core';
 
 import { OnePagerData } from '../model/model';
 import { ContentCard } from './ContentCard';
 
- 
 import NumberFormat from 'react-number-format';
 
 type OnePagerFinancesProps = {
@@ -33,6 +32,13 @@ export const OnePagerFinances = ({
       <SubHeading>
         Funding Goal: {formatFinanceNumber(onePagerData.fundraisingStageGoal)}
       </SubHeading>
+
+      <Progress value={onePagerData.fundsRaisedInStage / onePagerData.fundraisingStageGoal * 100} />
+
+      <Text fontSize='sm' marginTop='10px'>
+        {onePagerData.fundraisingDetails}
+      </Text>
+
     </ContentCard>
   );
 };
