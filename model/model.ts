@@ -13,6 +13,12 @@ export interface OnePagerPublicData {
   briefDescription: string;
 }
 
+/** Faq related data fields. */
+export interface OnePagerFaq {
+  question: string;
+  answer: string
+}
+
 /** Full one pager data model. */
 export interface OnePagerData {
   companyName: string;
@@ -27,4 +33,5 @@ export interface OnePagerData {
   fundraisingDetails?: string;
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
+  faqs?: OnePagerFaq[];
 }
