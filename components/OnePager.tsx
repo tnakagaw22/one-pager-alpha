@@ -50,9 +50,13 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
 
       <Diveder50 />
 
-      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+      {onePagerData.pitchVideoLink ? (
+        <>
+          <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
 
-      <Diveder50 />
+          <Diveder50 />
+        </>
+      ) : null}
 
       <ContentCard isLoading={false}>
         <Flex justifyContent='center'>
