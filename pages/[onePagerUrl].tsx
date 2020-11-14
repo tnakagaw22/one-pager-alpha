@@ -13,16 +13,36 @@ type OnePagerPageData = {
 
 /** Render a One Pager Page. */
 export default function OnePagerPage({ onePagerUrl }: OnePagerPageData) {
-  const [viewCountWithoutPayment, setViewCountWithoutPayment] = useLocalStorage('viewCountWithoutPayment', 0);
+  const [visitedOnePagerWithoutPayment, setVisitedOnePagerWithoutPayment] = useLocalStorage('visitedOnePagerWithoutPayment', []);
+  const [isPaid, setIsPaid] = useLocalStorage('isPaid', false);
 
   React.useEffect(() => {
-    setViewCountWithoutPayment(viewCountWithoutPayment + 1);
+    // setVisitedOnePagerWithoutPayment([]);
+    // setIsPaid(false);
+
+    if (isPaid === false) {
+
+      if (visitedOnePagerWithoutPayment.indexOf(onePagerUrl) < 0 && visitedOnePagerWithoutPayment.length < 2) {
+        setVisitedOnePagerWithoutPayment((storedValue) => {
+          storedValue.push(onePagerUrl);
+
+          return storedValue;
+        });
+      }
+    }
+
   }, []);
-  console.log(viewCountWithoutPayment);
+
+  // console.log(visitedOnePagerWithoutPayment);
+
+  const showPaymentModal =
+    visitedOnePagerWithoutPayment.indexOf(onePagerUrl) < 0
+    && visitedOnePagerWithoutPayment.length >= 2
+    && isPaid === false;
 
   return (
     <>
-      <PaymentModal isOpen={viewCountWithoutPayment > 2} />
+      <PaymentModal isOpen={showPaymentModal} />
       <OnePager onePagerUrl={onePagerUrl}></OnePager>
     </>
   );
